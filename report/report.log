@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2013.1.26)  27 SEP 2015 00:15
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2013.1.26)  6 OCT 2015 15:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1205,15 +1205,15 @@ Package caption Info: End \AtBeginDocument code.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(85.35826pt, 443.57848pt, 85.35826pt)
-* v-part:(T,H,B)=(85.35826pt, 624.25346pt, 85.35826pt)
+* h-part:(L,W,R)=(93.89418pt, 426.50664pt, 93.89418pt)
+* v-part:(T,H,B)=(93.89418pt, 607.18163pt, 93.89418pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=443.57848pt
-* \textheight=624.25346pt
-* \oddsidemargin=13.08827pt
-* \evensidemargin=13.08827pt
-* \topmargin=-23.91173pt
+* \textwidth=426.50664pt
+* \textheight=607.18163pt
+* \oddsidemargin=21.62419pt
+* \evensidemargin=21.62419pt
+* \topmargin=-15.37581pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=10.0pt
@@ -1243,28 +1243,266 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 47.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
-) [1
+)
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
 
-{/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./repo
-rt.aux) ) 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--58
+
+ []
+
+[1
+
+{/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 76--78
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 87--89
+
+ []
+
+[2] (../codes/svm.py
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 5.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 5.
+ [3] [4])
+(../codes/kernels.py [5]
+Overfull \hbox (1.79262pt too wide) in paragraph at lines 16--19
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][] 
+ []
+
+) [6] <images/linear/figure_1.png, id=43, 586.8324pt x 442.2924pt>
+File: images/linear/figure_1.png Graphic file (type png)
+
+<use images/linear/figure_1.png>
+Package pdftex.def Info: images/linear/figure_1.png used on input line 135.
+(pdftex.def)             Requested size: 284.52756pt x 214.45082pt.
+
+<images/linear/figure_2.png, id=45, 586.8324pt x 442.2924pt>
+File: images/linear/figure_2.png Graphic file (type png)
+
+<use images/linear/figure_2.png>
+Package pdftex.def Info: images/linear/figure_2.png used on input line 143.
+(pdftex.def)             Requested size: 284.52756pt x 214.45082pt.
+ [7 <./images/linear/figure_1.png> <./images/linear/figure_2.png>]
+<images/pol/1/figure_2.png, id=53, 586.8324pt x 442.2924pt>
+File: images/pol/1/figure_2.png Graphic file (type png)
+
+<use images/pol/1/figure_2.png>
+Package pdftex.def Info: images/pol/1/figure_2.png used on input line 154.
+(pdftex.def)             Requested size: 153.54355pt x 115.72218pt.
+
+Overfull \hbox (25.59026pt too wide) in paragraph at lines 154--155
+[][] 
+ []
+
+<images/pol/1/figure_3.png, id=54, 586.8324pt x 442.2924pt>
+File: images/pol/1/figure_3.png Graphic file (type png)
+
+<use images/pol/1/figure_3.png>
+Package pdftex.def Info: images/pol/1/figure_3.png used on input line 159.
+(pdftex.def)             Requested size: 153.54355pt x 115.72218pt.
+
+Overfull \hbox (25.59026pt too wide) in paragraph at lines 159--160
+[][] 
+ []
+
+<images/pol/1/figure_4.png, id=55, 586.8324pt x 442.2924pt>
+File: images/pol/1/figure_4.png Graphic file (type png)
+
+<use images/pol/1/figure_4.png>
+Package pdftex.def Info: images/pol/1/figure_4.png used on input line 164.
+(pdftex.def)             Requested size: 153.54355pt x 115.72218pt.
+
+Overfull \hbox (25.59026pt too wide) in paragraph at lines 164--165
+[][] 
+ []
+
+<images/pol/2/figure_2.png, id=56, 586.8324pt x 442.2924pt>
+File: images/pol/2/figure_2.png Graphic file (type png)
+
+<use images/pol/2/figure_2.png>
+Package pdftex.def Info: images/pol/2/figure_2.png used on input line 174.
+(pdftex.def)             Requested size: 153.54355pt x 115.72218pt.
+
+Overfull \hbox (25.59026pt too wide) in paragraph at lines 174--175
+[][] 
+ []
+
+<images/pol/2/figure_3.png, id=57, 586.8324pt x 442.2924pt>
+File: images/pol/2/figure_3.png Graphic file (type png)
+
+<use images/pol/2/figure_3.png>
+Package pdftex.def Info: images/pol/2/figure_3.png used on input line 179.
+(pdftex.def)             Requested size: 153.54355pt x 115.72218pt.
+
+Overfull \hbox (25.59026pt too wide) in paragraph at lines 179--180
+[][] 
+ []
+
+<images/pol/2/figure_4.png, id=58, 586.8324pt x 442.2924pt>
+File: images/pol/2/figure_4.png Graphic file (type png)
+
+<use images/pol/2/figure_4.png>
+Package pdftex.def Info: images/pol/2/figure_4.png used on input line 184.
+(pdftex.def)             Requested size: 153.54355pt x 115.72218pt.
+
+Overfull \hbox (25.59026pt too wide) in paragraph at lines 184--185
+[][] 
+ []
+
+[8 <./images/pol/1/figure_2.png> <./images/pol/1/figure_3.png> <./images/pol/1/
+figure_4.png> <./images/pol/2/figure_2.png> <./images/pol/2/figure_3.png> <./im
+ages/pol/2/figure_4.png>]
+<images/rbf/1/figure_1.png, id=71, 586.8324pt x 442.2924pt>
+File: images/rbf/1/figure_1.png Graphic file (type png)
+
+<use images/rbf/1/figure_1.png>
+Package pdftex.def Info: images/rbf/1/figure_1.png used on input line 196.
+(pdftex.def)             Requested size: 153.54355pt x 115.72218pt.
+
+Overfull \hbox (25.59026pt too wide) in paragraph at lines 196--197
+[][] 
+ []
+
+<images/rbf/1/figure_2.png, id=72, 586.8324pt x 442.2924pt>
+File: images/rbf/1/figure_2.png Graphic file (type png)
+
+<use images/rbf/1/figure_2.png>
+Package pdftex.def Info: images/rbf/1/figure_2.png used on input line 201.
+(pdftex.def)             Requested size: 153.54355pt x 115.72218pt.
+
+Overfull \hbox (25.59026pt too wide) in paragraph at lines 201--202
+[][] 
+ []
+
+<images/rbf/1/figure_3.png, id=73, 586.8324pt x 442.2924pt>
+File: images/rbf/1/figure_3.png Graphic file (type png)
+
+<use images/rbf/1/figure_3.png>
+Package pdftex.def Info: images/rbf/1/figure_3.png used on input line 206.
+(pdftex.def)             Requested size: 153.54355pt x 115.72218pt.
+
+Overfull \hbox (25.59026pt too wide) in paragraph at lines 206--207
+[][] 
+ []
+
+<images/rbf/2/figure_1.png, id=74, 586.8324pt x 442.2924pt>
+File: images/rbf/2/figure_1.png Graphic file (type png)
+
+<use images/rbf/2/figure_1.png>
+Package pdftex.def Info: images/rbf/2/figure_1.png used on input line 216.
+(pdftex.def)             Requested size: 153.54355pt x 115.72218pt.
+
+Overfull \hbox (25.59026pt too wide) in paragraph at lines 216--217
+[][] 
+ []
+
+<images/rbf/2/figure_2.png, id=75, 586.8324pt x 442.2924pt>
+File: images/rbf/2/figure_2.png Graphic file (type png)
+
+<use images/rbf/2/figure_2.png>
+Package pdftex.def Info: images/rbf/2/figure_2.png used on input line 221.
+(pdftex.def)             Requested size: 153.54355pt x 115.72218pt.
+
+Overfull \hbox (25.59026pt too wide) in paragraph at lines 221--222
+[][] 
+ []
+
+<images/rbf/2/figure_3.png, id=76, 586.8324pt x 442.2924pt>
+File: images/rbf/2/figure_3.png Graphic file (type png)
+
+<use images/rbf/2/figure_3.png>
+Package pdftex.def Info: images/rbf/2/figure_3.png used on input line 226.
+(pdftex.def)             Requested size: 153.54355pt x 115.72218pt.
+
+Overfull \hbox (25.59026pt too wide) in paragraph at lines 226--227
+[][] 
+ []
+
+<images/rbf/3/figure_1.png, id=77, 586.8324pt x 442.2924pt>
+File: images/rbf/3/figure_1.png Graphic file (type png)
+
+<use images/rbf/3/figure_1.png>
+Package pdftex.def Info: images/rbf/3/figure_1.png used on input line 236.
+(pdftex.def)             Requested size: 153.54355pt x 115.72218pt.
+
+Overfull \hbox (25.59026pt too wide) in paragraph at lines 236--237
+[][] 
+ []
+
+<images/rbf/3/figure_2.png, id=78, 586.8324pt x 442.2924pt>
+File: images/rbf/3/figure_2.png Graphic file (type png)
+
+<use images/rbf/3/figure_2.png>
+Package pdftex.def Info: images/rbf/3/figure_2.png used on input line 241.
+(pdftex.def)             Requested size: 153.54355pt x 115.72218pt.
+
+Overfull \hbox (25.59026pt too wide) in paragraph at lines 241--242
+[][] 
+ []
+
+<images/rbf/3/figure_3.png, id=79, 586.8324pt x 442.2924pt>
+File: images/rbf/3/figure_3.png Graphic file (type png)
+
+<use images/rbf/3/figure_3.png>
+Package pdftex.def Info: images/rbf/3/figure_3.png used on input line 246.
+(pdftex.def)             Requested size: 153.54355pt x 115.72218pt.
+
+Overfull \hbox (25.59026pt too wide) in paragraph at lines 246--247
+[][] 
+ []
+
+[9 <./images/rbf/1/figure_1.png> <./images/rbf/1/figure_2.png> <./images/rbf/1/
+figure_3.png> <./images/rbf/2/figure_1.png> <./images/rbf/2/figure_2.png> <./im
+ages/rbf/2/figure_3.png> <./images/rbf/3/figure_1.png> <./images/rbf/3/figure_2
+.png> <./images/rbf/3/figure_3.png>] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 20638 strings out of 493488
- 367440 string characters out of 3141326
- 459736 words of memory out of 3000000
- 23525 multiletter control sequences out of 15000+200000
- 14077 words of font info for 45 fonts, out of 3000000 for 9000
+ 21191 strings out of 493488
+ 374366 string characters out of 3141326
+ 506264 words of memory out of 3000000
+ 24045 multiletter control sequences out of 15000+200000
+ 21536 words of font info for 63 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 68i,6n,65p,882b,218s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/cm-super/cm-super-
-t1.enc}</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17
-.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfbx1440.p
-fb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb
-></usr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><
-/usr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb>
-Output written on report.pdf (1 page, 48043 bytes).
+ 68i,8n,65p,882b,1666s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/local/texlive/2012/t
+exmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2012/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2012/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2012/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2012/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2012/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2012/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2012/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2012/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2012/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2012/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/publi
+c/cm-super/sfbx0800.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/
+cm-super/sfbx1000.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/cm
+-super/sfbx1200.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-s
+uper/sfbx1440.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-sup
+er/sfrm0500.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-super
+/sfrm0800.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-super/s
+frm0900.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfr
+m1000.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfrm1
+200.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfrm172
+8.pfb>
+Output written on report.pdf (9 pages, 840261 bytes).
 PDF statistics:
- 32 PDF objects out of 1000 (max. 8388607)
- 23 compressed objects within 1 object stream
+ 165 PDF objects out of 1000 (max. 8388607)
+ 96 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 98 words of extra memory for PDF output out of 10000 (max. 10000000)
 

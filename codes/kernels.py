@@ -12,14 +12,16 @@ def polynomial_kernel(x, y, args):
 
 
 def rbf_kernel(x, y, args):
-    return math.exp(-1/(2*math.pow(args[0], 2))*math.pow(np.linalg.norm([x[i]-y[i] for i in range(len(x))]), 2))
+    return math.exp(-1/(2*math.pow(args[0], 2)) * \
+                    math.pow(np.linalg.norm([x[i]-y[i] for i in range(len(x))]), 2))
 
 
 def sigmoid_kernel(x, y, args):
     return math.tanh(args[0]*np.dot(x, y) - args[1])
 
 def indicator(x, alpha, data, kernel, args):
-    return sum([alpha[i]*data[i][2]*kernel(x, data[i][0:2], args) for i in range(len(alpha))])
+    return sum([alpha[i]*data[i][2]*kernel(x, data[i][0:2], args) \
+                for i in range(len(alpha))])
 
 if __name__ == "__main__":
     x = np.array([1, 2])
