@@ -15,13 +15,19 @@ def svm(classA, classB, kernel_function, args, C):
     pylab.plot([p[0] for p in classB], [p[1] for p in classB], 'ro')
     N = np.shape(data)[0]
 
-    # Create matrices (rajouter des matrix partout)
-    P = [[p[2]*q[2]*kernel_function(p[0:2], q[0:2], args) for p in data] \
-         for q in data]
-    print P
-    q = -1*np.ones(N)
-    G = -1*np.identity(N)
-    h = np.zeros(N)
+    # Create matrices
+    if C == 0:
+	q = -1*np.ones(N)
+	G = -1*np.identity(N)
+	h = np.zeros(N)
+    else:
+	h1 = np.zeros(N)
+	G1 = -1*np.identity(N)
+	h2 = C*np.ones(N)
+	G2 = 1*np.identity(N)
+	q = -1*np.ones(N)
+	h = np.concatenate((h1,h2),axis=0)
+	G = np.concatenate((G1,G2),axis=0)
 
     # Solve the optimization problem
     r = qp(matrix(P) , matrix(q) , matrix(G) , matrix(h))
@@ -126,3 +132,11 @@ if __name__ == "__main__":
 	svm(classA, classB, sigmoid_kernel, [0.1, 0.0], 0)
 	svm(classA, classB, sigmoid_kernel, [0.2, -1], 0)
 	svm(classA, classB, sigmoid_kernel, [0.3, -1], 0)"""
+
+    # Sigmoid_Pierre
+    if test == 8:
+        classA = [(random.normalvariate(-1.5, 0.5), \
+	 	   random.normalvariate(1.5, 0.5), 1.0) for i in range(5)] 
+        classB = [(random.normalvariate(3, 0.1), \
+ 		   random.normalvariate(-2, 0.1), -1.0) for i in range(10)] 
+        svm(classA, classB, sigmoid_kernel, [0.1, -5], 1000)
