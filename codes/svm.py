@@ -17,7 +17,8 @@ def svm(classA, classB, kernel_function, args, C):
     N = np.shape(data)[0]
 
     # Create matrices (rajouter des matrix partout)
-    P = [[p[2]*q[2]*kernel_function(p[0:2], q[0:2], args) for p in data] for q in data]
+    P = [[p[2]*q[2]*kernel_function(p[0:2], q[0:2], args)\
+ for p in data] for q in data]
     print(P)
     
     if C == 0:
@@ -44,8 +45,10 @@ def svm(classA, classB, kernel_function, args, C):
     # Plot the boundary
     xrange = np.arange(-4, 4, 0.05)
     yrange = np.arange(-4, 4, 0.05)
-    grid = matrix([[indicator([x, y], alpha, data, kernel_function, args) for y in yrange] for x in xrange])
-    pylab.contour(xrange, yrange, grid, (-1.0, 0.0, 1.0), colors=('red', 'black', 'blue'), linewidths=(1, 3, 1))
+    grid = matrix([[indicator([x, y], alpha, data, kernel_function, args)\
+ for y in yrange] for x in xrange])
+    pylab.contour(xrange, yrange, grid, (-1.0, 0.0, 1.0),\
+ colors=('red', 'black', 'blue'), linewidths=(1, 3, 1))
     pylab.show()
 
 
@@ -59,78 +62,119 @@ if __name__ == "__main__":
         svm(classA, classB, linear_kernel, [0], 0)
 
     if test == 2:
-        classA = [(random.normalvariate(-1.5, 1.0), random.normalvariate(0.5, 1.0), 1.0) for i in range(5)]
-        classB = [(random.normalvariate(0.0, 0.5), random.normalvariate(-0.5, 0.5), -1.0) for i in range(10)]
-        svm(classA, classB, linear_kernel, [0], 12)
+        classA = [(random.normalvariate(-1.5, 1.0), random.normalvariate(0.5, 1.0),\
+ 1.0) for i in range(5)]
+        classB = [(random.normalvariate(0.0, 0.5), random.normalvariate(-0.5, 0.5),\
+ -1.0) for i in range(10)]
+        svm(classA, classB, linear_kernel, [0], 0)
 
     # Polynomial
     if test == 3:
-        classA = [(random.normalvariate(2.0, 0.5), random.normalvariate(2.0, 0.5), 1.0) for i in range(5)] + \
-		 [(random.normalvariate(0.0, 0.5), random.normalvariate(2.5, 0.5), 1.0) for i in range(5)]
-        classB = [(random.normalvariate(0.0, 0.5), random.normalvariate(0.0, 0.5), -1.0) for i in range(10)]
+        classA = [(random.normalvariate(2.0, 0.5), random.normalvariate(2.0, 0.5),\
+ 1.0) for i in range(5)] + \
+		 [(random.normalvariate(0.0, 0.5), random.normalvariate(2.5, 0.5),\
+ 1.0) for i in range(5)]
+        classB = [(random.normalvariate(0.0, 0.5), random.normalvariate(0.0, 0.5),\
+ -1.0) for i in range(10)]
         svm(classA, classB, polynomial_kernel, [2], 0)
 	svm(classA, classB, polynomial_kernel, [3], 0)
 	svm(classA, classB, polynomial_kernel, [4], 0)
 
     # RBF
     if test == 4:
-        classA = [(random.normalvariate(2.0, 0.5), random.normalvariate(2.0, 0.5), 1.0) for i in range(5)] + \
-		 [(random.normalvariate(0.0, 0.5), random.normalvariate(2.5, 0.5), 1.0) for i in range(5)]
-        classB = [(random.normalvariate(0.0, 0.5), random.normalvariate(0.0, 0.5), -1.0) for i in range(10)]
+        classA = [(random.normalvariate(2.0, 0.5), random.normalvariate(2.0, 0.5),\
+ 1.0) for i in range(5)] + \
+		 [(random.normalvariate(0.0, 0.5), random.normalvariate(2.5, 0.5),\
+ 1.0) for i in range(5)]
+        classB = [(random.normalvariate(0.0, 0.5), random.normalvariate(0.0, 0.5),\
+ -1.0) for i in range(10)]
         svm(classA, classB, rbf_kernel, [1], 0)
 	svm(classA, classB, rbf_kernel, [2], 0)
 	svm(classA, classB, rbf_kernel, [3], 0)
 
     if test == 5:
-        classA = [(random.normalvariate(-1.5, 0.5), random.normalvariate(1.5, 0.5), 1.0) for i in range(5)] + \
-                 [(random.normalvariate(1.5, 0.5), random.normalvariate(-1.5, 0.5), 1.0) for i in range(5)] + \
-		 [(random.normalvariate(-1.5, 0.5), random.normalvariate(-1.5, 0.5), 1.0) for i in range(5)]
-        classB = [(random.normalvariate(1.5, 0.5), random.normalvariate(1.5, 0.5), -1.0) for i in range(5)] + \
+        classA = [(random.normalvariate(-1.5, 0.5), random.normalvariate(1.5, 0.5),\
+ 1.0) for i in range(5)] + \
+                 [(random.normalvariate(1.5, 0.5), random.normalvariate(-1.5, 0.5),\
+ 1.0) for i in range(5)] + \
+		 [(random.normalvariate(-1.5, 0.5), random.normalvariate(-1.5, 0.5),\
+ 1.0) for i in range(5)]
+        classB = [(random.normalvariate(1.5, 0.5), random.normalvariate(1.5, 0.5),\
+ -1.0) for i in range(5)] + \
   		 [(-1.0, -1.0, -1.0)]
         svm(classA, classB, rbf_kernel, [1], 0)
 	svm(classA, classB, rbf_kernel, [2], 0)
 	svm(classA, classB, rbf_kernel, [3], 0)
 
     if test == 6:
-        classA = [(random.normalvariate(-1.5, 0.5), random.normalvariate(1.5, 0.5), 1.0) for i in range(5)] + \
-                 [(random.normalvariate(1.5, 0.5), random.normalvariate(-1.5, 0.5), 1.0) for i in range(5)] + \
-		 [(random.normalvariate(-1.5, 0.5), random.normalvariate(-1.5, 0.5), 1.0) for i in range(5)] + \
+        classA = [(random.normalvariate(-1.5, 0.5), random.normalvariate(1.5, 0.5),\
+ 1.0) for i in range(5)] + \
+                 [(random.normalvariate(1.5, 0.5), random.normalvariate(-1.5, 0.5),\
+ 1.0) for i in range(5)] + \
+		 [(random.normalvariate(-1.5, 0.5), random.normalvariate(-1.5, 0.5),\
+ 1.0) for i in range(5)] + \
 		 [(0.0, 0.0, 1.0)]
-        classB = [(random.normalvariate(1.5, 0.5), random.normalvariate(1.5, 0.5), -1.0) for i in range(5)] + \
+        classB = [(random.normalvariate(1.5, 0.5), random.normalvariate(1.5, 0.5),\
+ -1.0) for i in range(5)] + \
   		 [(-1.0, -1.0, -1.0)]
         svm(classA, classB, rbf_kernel, [1], 0)
 	svm(classA, classB, rbf_kernel, [2], 0)
 	svm(classA, classB, rbf_kernel, [3], 0)
 
     # Sigmoid
-    if test == 7:
-        classA = [(random.normalvariate(-1.5, 0.5), random.normalvariate(1.5, 0.5), 1.0) for i in range(5)] + \
-                 [(random.normalvariate(1.5, 0.5), random.normalvariate(-1.5, 0.5), 1.0) for i in range(5)] + \
-		 [(random.normalvariate(-1.5, 0.5), random.normalvariate(-1.5, 0.5), 1.0) for i in range(5)]
-        classB = [(random.normalvariate(1.5, 0.5), random.normalvariate(1.5, 0.5), -1.0) for i in range(5)] + \
-  		 [(-0.5, -0.5, -1.0)]
-        
-	svm(classA, classB, sigmoid_kernel, [2], 0)
-	svm(classA, classB, sigmoid_kernel, [0.1, 0.0], 0)
-	svm(classA, classB, sigmoid_kernel, [0.2, -1], 0)
-	svm(classA, classB, sigmoid_kernel, [0.3, -1], 0)
-    # Sigmoid_Pierre
     if test == 8:
-        classA = [(random.normalvariate(-1.5, 0.5), random.normalvariate(1.5, 0.5), 1.0) for i in range(5)] 
-        classB = [(random.normalvariate(3, 0.1), random.normalvariate(-2, 0.1), -1.0) for i in range(10)] 
+        classA = [(random.normalvariate(-1.5, 0.5), random.normalvariate(1.5, 0.5),\
+ 1.0) for i in range(5)] 
+        classB = [(random.normalvariate(3, 0.1), random.normalvariate(-2, 0.1),\
+ -1.0) for i in range(10)] 
         svm(classA, classB, sigmoid_kernel, [0.1, -5], 0)
-        #svm(classA, classB, sigmoid_kernel, [-0.1, 3], 0)
-        classA = [(random.normalvariate(2.0, 0.5), random.normalvariate(2.0, 0.5), 1.0) for i in range(5)] + \
-		 [(random.normalvariate(0.0, 0.5), random.normalvariate(2.5, 0.5), 1.0) for i in range(5)]
-        classB = [(random.normalvariate(0.0, 0.5), random.normalvariate(0.0, 0.5), -1.0) for i in range(10)]
+	svm(classA, classB, sigmoid_kernel, [-0.1, -2.5], 0)
+	svm(classA, classB, sigmoid_kernel, [0.1, 0.01], 0)
+
+        classA = [(random.normalvariate(2.0, 0.5), random.normalvariate(2.0, 0.5),\
+ 1.0) for i in range(5)] + \
+		 [(random.normalvariate(0.0, 0.5), random.normalvariate(2.5, 0.5),\
+ 1.0) for i in range(5)]
+        classB = [(random.normalvariate(0.0, 0.5), random.normalvariate(0.0, 0.5),\
+ -1.0) for i in range(10)]
 	svm(classA, classB, sigmoid_kernel, [0.1, -5], 0)
-        classA = [(random.normalvariate(-1.5, 0.5), random.normalvariate(1.5, 0.5), 1.0) for i in range(5)] + \
-                 [(random.normalvariate(1.5, 0.5), random.normalvariate(-1.5, 0.5), 1.0) for i in range(5)] + \
-		 [(random.normalvariate(-1.5, 0.5), random.normalvariate(-1.5, 0.5), 1.0) for i in range(5)] 
-        classB = [(random.normalvariate(1.5, 0.5), random.normalvariate(1.5, 0.5), -1.0) for i in range(5)]
-        svm(classA, classB, sigmoid_kernel, [0.6, 0], 0)
 
+#Testing Slack Variable with RNB
+    if test == 9: 
+        classA = [(random.normalvariate(-1.5, 0.5), random.normalvariate(1.5, 0.5),\
+ 1.0) for i in range(5)] + \
+                 [(random.normalvariate(1.5, 0.5), random.normalvariate(-1.5, 0.5),\
+ 1.0) for i in range(5)] + \
+		 [(random.normalvariate(-1.5, 0.5), random.normalvariate(-1.5, 0.5),\
+ 1.0) for i in range(5)] + \
+		 [(0.0, 0.0, 1.0)]
+        classB = [(random.normalvariate(1.5, 0.5), random.normalvariate(1.5, 0.5),\
+ -1.0) for i in range(5)] + \
+  		 [(-1.2, 1.0, -1.0)]
+        svm(classA, classB, rbf_kernel, [1], 3)
 
+    # Polynomial with Slack
+    if test == 10:
+        classA = [(random.normalvariate(2.0, 0.5), random.normalvariate(2.0, 0.5),\
+ 1.0) for i in range(5)] + \
+		 [(random.normalvariate(0.0, 0.5), random.normalvariate(2.5, 0.5),\
+ 1.0) for i in range(5)] + \
+		 [(random.normalvariate(-1.5, 0.2), random.normalvariate(-1.5, 0.2),\
+ 1.0) for i in range(5)] 
 
+        classB = [(random.normalvariate(0.0, 0.5), random.normalvariate(0.0, 0.5),\
+ -1.0) for i in range(10)] + \
+		 [(1.9, 2.0, -1.0)]
+	svm(classA, classB, polynomial_kernel, [4], 2.1)
+    # Lin with Slack
+    if test == 11:
+        classA = [(random.normalvariate(-1.5, 0.5), random.normalvariate(0.5, 1.0),\
+ 1.0) for i in range(20)]
+        classB = [(random.normalvariate(1.5, 0.5), random.normalvariate(-0.5, 0.5),\
+ -1.0) for i in range(20)] + \
+		 [(-0.5, 0.0, -1.0)]
+        svm(classA, classB, linear_kernel, [0], 4)
+
+   
 
 

@@ -41,7 +41,7 @@
 \title{Lab $2$: Support Vector Machines\\
 \large{DD2431 - Machine Learning}}
 \date{\today}
-\author{Mélanie Sedda}
+\author{Mélanie Sedda, Pierre Springer}
 
 \begin{document}
 \maketitle
@@ -85,7 +85,7 @@ $$\mathcal{K}(x,y) = (x \cdot y + 1)^p$$
 $$\mathcal{K}(x,y) = e^{-\frac{||x-y||^2}{2\sigma^2}}$$
 \paragraph{Sigmoid kernel}
 $$\mathcal{K}(x,y)  = \tanh(k x \cdot y - \delta)$$
-Then additional $+1$ terms are here to allow hyperplanes with a biais, i.e. that that do not necessarily contain the origin.\\
+Then additional $+1$ terms are here to allow hyperplanes with a bias, i.e. that that do not necessarily contain the origin.\\
 
 But how do we make some scalar products appear? For this, we will consider the dual problem of (\ref{primal}). There are as many dual variables as primal constraints. Let us call $\alpha_i$ those variables. The constraints on these variables are simply $\alpha_i \geq 0$ and the objective becomes
 $$\max_{\alpha} \ \min_{w} \ L = \max_{\alpha} \ \min_{w} \ \frac{1}{2} w^Tw - \sum_i \alpha_i (t_iw^T\phi(x_i)-1).$$ 
@@ -253,9 +253,85 @@ with the same $P$ as before. $C$ is a parameter that can be tuned. If $C$ is lar
 
 The parameter $\sigma$ can be used to control the smoothness of the boundary.
 
+\newpage
 \subsection{Sigmoid kernel}
+\begin{figure}[!h]
+    \centering
+    \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=1.2\textwidth]{images/sigmoid/test1_1.png}
+        \caption{$k  = 0.1,~\delta = -5$} \label{sigmoid_1_figure_1}
+    \end{subfigure}
+    ~ 
+    \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=1.2\textwidth]{images/sigmoid/test1_2.png}
+        \caption{$k  = -0.1,~\delta = -2.5$}  \label{sigmoid_1_figure_2}
+    \end{subfigure}
+     ~ 
+    \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=1.2\textwidth]{images/sigmoid/test1_3.png}
+        \caption{$k  = 0.1,~\delta = 0.01$}  \label{sigmoid_1_figure_3}
+    \end{subfigure}
+    \caption{Sigmoid kernel : test 1}
+    \label{rbf_1}
+\end{figure}
+
+\begin{figure}[!h]
+    \centering
+     \includegraphics[width=0.8\textwidth]{images/sigmoid/sigmo2.png}
+
+    \caption{Sigmoid kernel : test 2,$k  = 0.1,~\delta = -5$ }
+    \label{rbf_2}
+\end{figure}
+
+
+As the $logh$ function has different numbers only close to 0, we see. that we can manipulate the scalar product to give it reasonable values with the factor $k$. To get this value close to 0, we can use the parameter $\delta$. A negative $k$ seems to invert the results and lead to worse ones.
+
+\newpage
 
 \subsection{Slack variables}
+\begin{figure}[!h]
+    \centering
+    \begin{subfigure}[b]{0.35\textwidth}
+        \includegraphics[width=1.2\textwidth]{images/slack/linCinf.png}
+        \caption{$C = \inf$} \label{slack_lin_figure_1}
+    \end{subfigure}
+    ~ 
+    \begin{subfigure}[b]{0.35\textwidth}
+        \includegraphics[width=1.2\textwidth]{images/slack/linC4.png}
+        \caption{$C = 4$}  \label{slack_lin_figure_2}
+    \end{subfigure}
+	\caption{Linear Kernel with slack-variable}
+    \label{lin_slack}
+\end{figure}
+
+\begin{figure}[!h]
+    \centering
+ \begin{subfigure}[b]{0.35\textwidth}
+        \includegraphics[width=1.2\textwidth]{images/slack/polyCinf.png}
+        \caption{$C = \inf$}  \label{slack_poly_figure_1}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.35\textwidth}
+        \includegraphics[width=1.2\textwidth]{images/slack/polyC2.png}
+        \caption{$C = 2$}  \label{slack_poly_figure_2}
+    \end{subfigure}
+	\caption{Polynomial Kernel with slack-variable}
+    \label{lin_slack}
+\end{figure}
+
+
+\begin{figure}[!h]
+    \centering
+ \begin{subfigure}[b]{0.35\textwidth}
+        \includegraphics[width=1.2\textwidth]{images/slack/RBFCinf.png}
+        \caption{$C = \inf$}  \label{slack_rbf_figure_1}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.35\textwidth}
+        \includegraphics[width=1.2\textwidth]{images/slack/rbfwithC10.png}
+        \caption{$C = 10$}  \label{slack_rbf_figure_2}
+    \end{subfigure}
+	\caption{RBF Kernel with slack-variable}
+    \label{RBF_slack}
+\end{figure}
 
 \end{document}
 
